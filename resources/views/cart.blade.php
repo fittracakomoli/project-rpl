@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ticket-Ink</title>
-
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-<body class="font-poppins antialiased">
-    <div class="min-h-screen bg-gray-100">
-        
+<x-main-layout>
 
         <section class="bg-white py-8 antialiased md:py-16">
             <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
@@ -20,12 +8,12 @@
                 <div class="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl">
                   <div class="space-y-6">
                     <div class="rounded-lg border border-gray-200 bg-white shadow-sm">
-                      <div class="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0">
+                      <div class="space-y-4 md:flex md:items-center md:justify-between md:gap-6 md:space-y-0 p-4">
                         <a href="#" class="shrink-0 md:order-1">
                           <img class="w-48 h-auto" src="/img/848274828252.jpg" alt="imac image" />
                         </a>
           
-                        <label for="counter-input" class="sr-only">Choose quantity:</label>
+                        <label for="counter-input" class="sr-only">Pilih Jumlah:</label>
                         <div class="flex items-center justify-between md:order-3 md:justify-end">
                           <div class="flex items-center">
                             <button type="button" id="decrement-button" data-input-counter-decrement="counter-input" class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-md border border-gray-300 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-100">
@@ -41,12 +29,29 @@
                               </button>
                           </div>
                           <div class="text-end md:order-4 md:w-32">
-                            <p class="text-base font-bold text-gray-900">$1,499</p>
+                            <p class="text-base font-bold text-gray-900">Rp 20.000</p>
                           </div>
                         </div>
           
                         <div class="w-full min-w-0 flex-1 space-y-4 md:order-2 md:max-w-md">
-                            <a href="#" class="text-base font-medium text-gray-900 hover:underline">PC system All in One APPLE iMac (2023) mqrq3ro/a, Apple M3, 24" Retina 4.5K, 8GB, SSD 256GB, 10-core GPU, Keyboard layout INT</a>
+                            <a href="#" class="text-base font-semibold text-gray-900 hover:underline">Jakarta Night Festival 2025</a>
+              
+                            <ul class="mt-2 flex items-center gap-4">
+                              <li class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"/>
+                                </svg>                  
+                                <p class="text-sm font-medium text-gray-500">27 Juni 2025</p>
+                              </li>
+                  
+                              <li class="flex items-center gap-2">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                                  <path fill-rule="evenodd" d="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z" clip-rule="evenodd"/>
+                                </svg>
+                                
+                                <p class="text-sm font-medium text-gray-500">Monas</p>
+                              </li>
+                            </ul>
 
                             <div class="flex items-center mt-4 gap-4">
                               <button type="button" class="inline-flex items-center text-sm font-medium text-red-600 hover:underline">
@@ -64,43 +69,38 @@
           
                 <div class="mx-auto mt-6 max-w-4xl flex-1 space-y-6 lg:mt-0 lg:w-full">
                   <div class="space-y-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
-                    <p class="text-xl font-semibold text-gray-90">Order summary</p>
+                    <p class="text-xl font-semibold text-gray-90">Ringkasan Belanja</p>
           
                     <div class="space-y-4">
                       <div class="space-y-2">
                         <dl class="flex items-center justify-between gap-4">
-                          <dt class="text-base font-normal text-gray-500">Original price</dt>
-                          <dd class="text-base font-medium text-gray-900">$7,592.00</dd>
+                          <dt class="text-base font-normal text-gray-500">Sub-Total</dt>
+                          <dd class="text-base font-medium text-gray-900">Rp 40.000</dd>
                         </dl>
           
                         <dl class="flex items-center justify-between gap-4">
-                          <dt class="text-base font-normal text-gray-500">Savings</dt>
-                          <dd class="text-base font-medium text-green-600">-$299.00</dd>
+                          <dt class="text-base font-normal text-gray-500">Diskon</dt>
+                          <dd class="text-base font-medium text-green-600">-Rp 1.000</dd>
                         </dl>
           
                         <dl class="flex items-center justify-between gap-4">
-                          <dt class="text-base font-normal text-gray-500">Store Pickup</dt>
-                          <dd class="text-base font-medium text-gray-900">$99</dd>
-                        </dl>
-          
-                        <dl class="flex items-center justify-between gap-4">
-                          <dt class="text-base font-normal text-gray-500">Tax</dt>
-                          <dd class="text-base font-medium text-gray-900">$799</dd>
+                          <dt class="text-base font-normal text-gray-500">Biaya Admin</dt>
+                          <dd class="text-base font-medium text-gray-900">Rp 2.000</dd>
                         </dl>
                       </div>
           
                       <dl class="flex items-center justify-between gap-4 border-t border-gray-200 pt-2">
                         <dt class="text-base font-bold text-gray-900">Total</dt>
-                        <dd class="text-base font-bold text-gray-900">$8,191.00</dd>
+                        <dd class="text-base font-bold text-gray-900">Rp 41.000</dd>
                       </dl>
                     </div>
           
-                    <a href="#" class="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300">Proceed to Checkout</a>
+                    <a href="#" class="flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300">Bayar Sekarang</a>
           
                     <div class="flex items-center justify-center gap-2">
-                      <span class="text-sm font-normal text-gray-500"> or </span>
-                      <a href="#" title="" class="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline">
-                        Continue Shopping
+                      <span class="text-sm font-normal text-gray-500"> atau </span>
+                      <a href="/tickets" title="" class="inline-flex items-center gap-2 text-sm font-medium text-primary-700 underline hover:no-underline">
+                        Lanjutkan Jelajahi Tiket
                         <svg class="h-5 w-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4" />
                         </svg>
@@ -112,8 +112,4 @@
             </div>
           </section>
 
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-</body>
-</html>
+</x-main-layout>

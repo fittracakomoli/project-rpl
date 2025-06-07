@@ -10,14 +10,11 @@
 </head>
 <body class="font-poppins antialiased">
     <div class="min-h-screen bg-gray-100">
-        @include('layouts.main-navbar')
         
         <!-- Page Content -->
         <main>
             {{ $slot }}
         </main>
-
-        @include('layouts.main-footer')
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
