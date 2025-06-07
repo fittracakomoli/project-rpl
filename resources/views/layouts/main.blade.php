@@ -8,7 +8,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-poppins antialiased h-[3000px]">
+<body class="font-poppins antialiased">
     <div class="min-h-screen bg-gray-100">
         @include('layouts.main-navbar')
         
