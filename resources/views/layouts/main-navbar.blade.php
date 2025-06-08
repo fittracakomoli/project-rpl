@@ -34,9 +34,24 @@
         </div>
   
         <div class="flex items-center lg:space-x-2">
-  
+
+          @guest
+          <a href="/login" class="inline-flex items-center rounded-lg justify-center p-2 hover:bg-primary-700 text-sm font-medium leading-none">
+            <svg class="w-4 h-4 lg:me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v3m-3-6V7a3 3 0 1 1 6 0v4m-8 0h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z"/>
+            </svg>
+             
+            <span>Log In</span>             
+          </a>
+
+          <a href="/register" class="inline-flex items-center rounded-lg justify-center p-2 hover:bg-primary-700 text-sm font-medium leading-none">
+            <span>Daftar Sekarang</span>             
+          </a>
+          @endguest
+
+          @auth
           <a href="/cart" class="inline-flex items-center rounded-lg justify-center p-2 hover:bg-primary-700 text-sm font-medium leading-none">
-            <svg class="w-5 h-5 lg:me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 lg:me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
             </svg> 
             <span class="hidden sm:flex">Keranjang</span>             
@@ -46,11 +61,12 @@
             <svg class="w-5 h-5 me-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-width="2" d="M7 17v1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1a3 3 0 0 0-3-3h-4a3 3 0 0 0-3 3Zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
             </svg>              
-            Fittra Marga Ardana
+            {{ Auth::user()->username }}
             <svg class="w-4 h-4 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
             </svg> 
           </button>
+          @endauth
   
           <div id="userDropdown1" class="hidden z-10 w-56 divide-y divide-gray-100 overflow-hidden overflow-y-auto rounded-lg bg-white antialiased shadow">
             <ul class="p-2 text-start text-sm font-medium text-gray-900">
@@ -59,7 +75,10 @@
             </ul>
         
             <div class="p-2 text-sm font-medium text-gray-900">
-              <a href="#" title="" class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100"> Log Out </a>
+              <form action="/logout" method="POST">
+                @csrf
+                <button title="" class="inline-flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm hover:bg-gray-100"> Log Out </button>
+              </form>
             </div>
           </div>
   
